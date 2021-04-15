@@ -1,4 +1,5 @@
 com/mycompany/factory/ApplicationContext.class
+com/mycompany/dao/GenericModifier.class
 com/mycompany/dao/GenericFinder.class
 com/mycompany/dao/GenericDao.class
 com/mycompany/daoImpl/DaoImplOperator.class

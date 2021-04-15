@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire/surefirebooter7978136691760640468.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire 2021-04-15T00-37-50_615-jvmRun1 surefire13242374521101690828tmp surefire_513969128352181204868tmp"/>
+    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire/surefirebooter10845499251715459965.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire 2021-04-15T01-04-01_174-jvmRun1 surefire7709620611143412704tmp surefire_517342122228740651455tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/Repository-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire/surefirebooter7978136691760640468.jar"/>
+    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/surefire/surefirebooter10845499251715459965.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="carlos"/>

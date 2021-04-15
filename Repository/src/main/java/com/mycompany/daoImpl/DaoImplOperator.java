@@ -39,7 +39,12 @@ public class DaoImplOperator extends DaoOperator {
 
     @Override
     public Operator findById(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return operator;
+    }
+
+    @Override
+    public void modify(Operator entity) {
+        operator.setIdTruck(entity.getIdTruck());
     }
     
 }

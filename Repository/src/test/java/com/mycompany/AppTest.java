@@ -42,6 +42,14 @@ public class AppTest
     }
     
     @Test
+    public void daoImplOperator_modify(){
+        DaoImplOperator dao = new DaoImplOperator();
+        Operator op = new Operator(1L, "testOperator", "testOperator", "testPassword", 2L);
+        dao.modify(op);
+        assertEquals(op.getIdTruck(), dao.findById(1L).getIdTruck());
+    }
+    
+    @Test
     public void daoImplFoodTruck_findById(){
         Long id = 1L;
         DaoImplFoodTruck dao = new DaoImplFoodTruck();

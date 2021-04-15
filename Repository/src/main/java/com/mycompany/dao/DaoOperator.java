@@ -12,7 +12,7 @@ import com.mycompany.exceptions.DoesNotExistException;
  *
  * @author carlos
  */
-public abstract class DaoOperator implements GenericFinder<Operator,Long> {
+public abstract class DaoOperator implements GenericFinder<Operator,Long>, GenericModifier<Operator> {
     
     public abstract Operator findByUsername(String username) throws DoesNotExistException;
 }

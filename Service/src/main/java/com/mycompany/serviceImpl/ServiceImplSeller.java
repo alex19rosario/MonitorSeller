@@ -32,6 +32,7 @@ public class ServiceImplSeller implements ServiceSeller {
         if(!op.getPassword().equalsIgnoreCase(password)){
             throw new IncorrectPasswordException("The password is incorrect.");
         }
+        daoOperator.modify(new Operator(1L, "testOperator", "testOperator", "testPassword", 1L));
         return new MoOperator(op.getId(), op.getName(), op.getUsername(), op.getPassword(), daoTruck.findById(idTruck));       
     }
 }
