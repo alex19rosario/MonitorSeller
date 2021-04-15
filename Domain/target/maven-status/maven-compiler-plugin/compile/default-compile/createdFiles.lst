@@ -1,2 +1,4 @@
 com/mycompany/entities/FoodTruck.class
+com/mycompany/model/MoOperator.class
+com/mycompany/abstracts/AbstractOperator.class
 com/mycompany/entities/Operator.class

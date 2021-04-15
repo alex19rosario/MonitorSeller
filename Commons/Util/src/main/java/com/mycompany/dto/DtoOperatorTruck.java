@@ -8,6 +8,7 @@ package com.mycompany.dto;
 
 import com.mycompany.entities.FoodTruck;
 import com.mycompany.entities.Operator;
+import com.mycompany.model.MoOperator;
 import java.io.Serializable;
 
 /**
@@ -16,19 +17,19 @@ import java.io.Serializable;
  */
 public class DtoOperatorTruck implements Serializable {
     
-    private Operator operator;
+    private MoOperator operator;
     private FoodTruck foodTruck;
 
-    public DtoOperatorTruck(Operator operator, FoodTruck foodTruck) {
+    public DtoOperatorTruck(MoOperator operator, FoodTruck foodTruck) {
         this.operator = operator;
         this.foodTruck = foodTruck;
     }
 
-    public Operator getOperator() {
+    public MoOperator getOperator() {
         return operator;
     }
 
-    public void setOperator(Operator operator) {
+    public void setOperator(MoOperator operator) {
         this.operator = operator;
     }
 

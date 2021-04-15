@@ -5,9 +5,9 @@
  */
 package com.mycompany.service;
 
-import com.mycompany.dto.DtoOperatorTruck;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.model.MoOperator;
 
 /**
  *
@@ -15,6 +15,6 @@ import com.mycompany.exceptions.IncorrectPasswordException;
  */
 public interface ServiceSeller {
     
-    public DtoOperatorTruck logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException;
+    public MoOperator logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException;
     
 }

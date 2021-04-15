@@ -6,10 +6,10 @@
 package com.mycompany.api;
 
 import com.mycompany.enums.Method;
-import com.mycompany.enums.ResponseType;
 import com.mycompany.enums.Service;
 import com.mycompany.supports.Request;
 import com.mycompany.supports.Response;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
@@ -23,7 +23,7 @@ public class Requester<O> {
     private Response response;
     private final String ip = "10.0.0.6";
     
-    public Response get(Service service, Method method, O object){
+    public Response consume(Service service, Method method, O object){
         
         try{
             Socket s = new Socket(ip, 4444); 
@@ -36,7 +36,7 @@ public class Requester<O> {
             out.close();
             s.close();
         }
-        catch(Exception e){
+        catch(IOException | ClassNotFoundException e){
             e.printStackTrace();
         }
         finally{
