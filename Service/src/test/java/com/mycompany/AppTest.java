@@ -1,9 +1,5 @@
 package com.mycompany;
 
-
-import com.mycompany.dto.DtoOperatorTruck;
-import com.mycompany.entities.FoodTruck;
-import com.mycompany.entities.Operator;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.model.MoOperator;
