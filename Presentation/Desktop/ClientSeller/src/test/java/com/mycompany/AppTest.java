@@ -2,10 +2,19 @@ package com.mycompany;
 
 import com.mycompany.api.Requester;
 import com.mycompany.dto.DtoSellerLogIn;
+import com.mycompany.entities.Component;
+import com.mycompany.entities.FoodTruck;
 import com.mycompany.enums.Method;
+import com.mycompany.enums.ResponseType;
 import com.mycompany.enums.Service;
+import com.mycompany.model.MoCombo;
 import com.mycompany.model.MoOperator;
+import com.mycompany.model.MoProduct;
+import com.mycompany.model.MoSale;
 import com.mycompany.supports.Response;
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 
@@ -46,5 +55,20 @@ public class AppTest
         String exceptionMessage = response.getExceptionMessage();
         assertEquals("The password is incorrect.",exceptionMessage);
         
+    }
+    
+    @Test
+    public void reportSail(){          
+        List<MoCombo> comboList = new ArrayList<>();
+        comboList.add(new MoCombo(1L, "testCombo", 100.0, new ArrayList<MoProduct>()));
+        List<MoProduct> productList = new ArrayList<>();
+        productList.add(new MoProduct(1L, "testProduct", 50.0, 100.0, new ArrayList<Component>()));
+        List<Component> componentList = new ArrayList<>();
+        componentList.add(new Component(1L, "testComponent", 50.0, 100.0));
+        MoOperator op = new MoOperator(1L, "testOperator", "testOperator", "testPassword");
+        FoodTruck truck = new FoodTruck(1L, "testAddress");
+        Timestamp date = new Timestamp(System.currentTimeMillis());
+        Response response = requester.consume(Service.SELLER, Method.REPORT_SALE, new MoSale(1L, date, comboList, productList, componentList, truck, op));
+        assertEquals(response.getType(), ResponseType.CONFIRMATION);      
     }
 }

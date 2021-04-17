@@ -7,13 +7,26 @@ package com.mycompany.serviceImpl;
 
 import com.mycompany.dao.DaoFoodTruck;
 import com.mycompany.dao.DaoOperator;
+import com.mycompany.dao.DaoSale;
+import com.mycompany.dao.DaoSaleCombo;
+import com.mycompany.dao.DaoSaleComponent;
+import com.mycompany.dao.DaoSaleProduct;
+import com.mycompany.entities.Component;
 import com.mycompany.entities.Operator;
+import com.mycompany.entities.Sale;
+import com.mycompany.entities.SaleCombo;
+import com.mycompany.entities.SaleComponent;
+import com.mycompany.entities.SaleProduct;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.factory.ApplicationContext;
 import com.mycompany.factory.DaoEnum;
+import com.mycompany.model.MoCombo;
 import com.mycompany.model.MoOperator;
+import com.mycompany.model.MoProduct;
+import com.mycompany.model.MoSale;
 import com.mycompany.service.ServiceSeller;
+import com.mycompany.supports.Calculator;
 
 /**
  *
@@ -24,6 +37,11 @@ public class ServiceImplSeller implements ServiceSeller {
  
     private final DaoOperator daoOperator = (DaoOperator) ApplicationContext.getDao(DaoEnum.DAO_OPERATOR);
     private final DaoFoodTruck daoTruck = (DaoFoodTruck) ApplicationContext.getDao(DaoEnum.DAO_FOODTRUCK);
+    private final DaoSale daoSale = (DaoSale) ApplicationContext.getDao(DaoEnum.DAO_SALE);
+    private final DaoSaleCombo daoSaleCombo = (DaoSaleCombo) ApplicationContext.getDao(DaoEnum.DAO_SALE_COMBO);
+    private final DaoSaleProduct daoSaleProduct = (DaoSaleProduct) ApplicationContext.getDao(DaoEnum.DAO_SALE_PRODUCT);
+    private final DaoSaleComponent daoSaleComponent = (DaoSaleComponent) ApplicationContext.getDao(DaoEnum.DAO_SALE_COMPONENT);
+    private final Calculator cal = new Calculator();
 
     @Override
     public MoOperator logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException {
@@ -34,5 +52,21 @@ public class ServiceImplSeller implements ServiceSeller {
         }
         daoOperator.modify(new Operator(1L, "testOperator", "testOperator", "testPassword", 1L));
         return new MoOperator(op.getId(), op.getName(), op.getUsername(), op.getPassword(), daoTruck.findById(idTruck));       
+    }
+
+    @Override
+    public void reportSale(MoSale moSale) {
+        
+        Double totalIncome = cal.getTotalIncome(moSale);       
+        daoSale.create(new Sale(moSale.getDate(), totalIncome, cal.getTotalProfit(moSale, totalIncome), moSale.getTruck().getId(), moSale.getOperator().getId()));
+        for(MoCombo c: moSale.getComboList()){
+            daoSaleCombo.create(new SaleCombo(moSale.getId(), c.getId()));
+        }
+        for(MoProduct p: moSale.getProductList()){
+            daoSaleProduct.create(new SaleProduct(moSale.getId(), p.getId()));
+        }
+        for(Component c: moSale.getComponentList()){
+            daoSaleComponent.create(new SaleComponent(moSale.getId(), c.getId()));
+        }      
     }
 }

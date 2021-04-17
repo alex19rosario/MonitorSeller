@@ -12,6 +12,10 @@ package com.mycompany.factory;
 public enum DaoEnum {
     
     DAO_OPERATOR,
-    DAO_FOODTRUCK;
+    DAO_FOODTRUCK,
+    DAO_SALE,
+    DAO_SALE_COMBO,
+    DAO_SALE_PRODUCT,
+    DAO_SALE_COMPONENT;
     
 }

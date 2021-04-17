@@ -23,4 +23,5 @@ public class AppTest
         MoOperator opToCompare = service.logIn("testOperator", "testPassword", 1L);
         assertEquals(op.getPassword(),opToCompare.getPassword());
     }
+    
 }

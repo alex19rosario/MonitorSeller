@@ -10,6 +10,7 @@ import com.mycompany.enums.Method;
 import com.mycompany.enums.ResponseType;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.model.MoSale;
 import com.mycompany.serviceImpl.ServiceImplSeller;
 import com.mycompany.supports.Request;
 import com.mycompany.supports.Response;
@@ -60,6 +61,15 @@ public class ClientHandler extends Thread {
                             this.s.close();
                         }
                     }
+                    if(request.getMethod() == Method.REPORT_SALE){
+                        MoSale sale = (MoSale) request.getObject();
+                        serviceSeller.reportSale(sale);
+                        Response response = new Response(ResponseType.CONFIRMATION);
+                        this.out.writeObject(response);
+                        this.out.close();
+                        this.s.close();
+                    }
+                    
             }
         }
         catch(IOException | ClassNotFoundException e){

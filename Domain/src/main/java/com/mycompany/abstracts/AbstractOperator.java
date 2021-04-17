@@ -11,8 +11,9 @@ import java.io.Serializable;
  *
  * @author carlos
  */
-public class AbstractOperator implements Serializable{
+public abstract class AbstractOperator implements Serializable{
     
+    private static final long serialVersionUID = 3195018210144640487L;
     private Long id;
     private String name;
     private String username;

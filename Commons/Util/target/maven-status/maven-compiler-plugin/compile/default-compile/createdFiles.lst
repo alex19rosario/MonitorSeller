@@ -1,5 +1,6 @@
 com/mycompany/exceptions/DoesNotExistException.class
 com/mycompany/dto/DtoSellerLogIn.class
+com/mycompany/supports/Calculator.class
 com/mycompany/enums/Service.class
 com/mycompany/enums/Method.class
 com/mycompany/supports/Request.class
