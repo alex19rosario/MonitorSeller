@@ -12,6 +12,8 @@ package com.mycompany.enums;
 public enum Method {
     
     LOG_IN,
-    REPORT_SALE;
+    REPORT_SALE,
+    LIST_ORDERS;
+    
     
 }

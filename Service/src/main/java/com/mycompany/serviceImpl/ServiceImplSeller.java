@@ -11,6 +11,7 @@ import com.mycompany.dao.DaoSale;
 import com.mycompany.dao.DaoSaleCombo;
 import com.mycompany.dao.DaoSaleComponent;
 import com.mycompany.dao.DaoSaleProduct;
+import com.mycompany.dto.DtoOrder;
 import com.mycompany.entities.Component;
 import com.mycompany.entities.Operator;
 import com.mycompany.entities.Sale;
@@ -27,6 +28,8 @@ import com.mycompany.model.MoProduct;
 import com.mycompany.model.MoSale;
 import com.mycompany.service.ServiceSeller;
 import com.mycompany.supports.Calculator;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -69,4 +72,13 @@ public class ServiceImplSeller implements ServiceSeller {
             daoSaleComponent.create(new SaleComponent(moSale.getId(), c.getId()));
         }      
     }
+
+    @Override
+    public List<DtoOrder> listOrders(Long idTruck) {      
+        List<DtoOrder> orderList = daoSale.findAllFrom(idTruck);
+        return orderList;     
+    }
+
+    
+    
 }

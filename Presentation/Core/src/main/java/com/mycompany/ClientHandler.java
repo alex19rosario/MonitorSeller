@@ -69,6 +69,13 @@ public class ClientHandler extends Thread {
                         this.out.close();
                         this.s.close();
                     }
+                    if(request.getMethod() == Method.LIST_ORDERS){
+                        Long idTruck = (Long) request.getObject();
+                        Response response = new Response(serviceSeller.listOrders(idTruck), ResponseType.LIST);
+                        this.out.writeObject(response);
+                        this.out.close();
+                        this.s.close();
+                    }
                     
             }
         }

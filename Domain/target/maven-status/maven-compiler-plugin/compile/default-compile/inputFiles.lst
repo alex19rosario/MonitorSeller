@@ -1,5 +1,6 @@
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/model/MoSale.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/entities/SaleComponent.java
+/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/entities/Return.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/model/MoOperator.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/entities/SaleCombo.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/src/main/java/com/mycompany/entities/Component.java

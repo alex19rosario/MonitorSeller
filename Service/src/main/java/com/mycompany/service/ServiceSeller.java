@@ -5,10 +5,12 @@
  */
 package com.mycompany.service;
 
+import com.mycompany.dto.DtoOrder;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.model.MoOperator;
 import com.mycompany.model.MoSale;
+import java.util.List;
 
 /**
  *
@@ -19,5 +21,7 @@ public interface ServiceSeller {
     public MoOperator logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException;
     
     public void reportSale(MoSale sale);
+    
+    public List<DtoOrder> listOrders(Long idTruck);
     
 }

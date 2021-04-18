@@ -17,7 +17,7 @@ public class Response<O> implements Serializable {
     
     private static final long serialVersionUID = 1L;
     private O object;
-    private List<O> objectList;
+    private List<O> list;
     private ResponseType type;
     private String exceptionMessage;
     
@@ -30,8 +30,8 @@ public class Response<O> implements Serializable {
         this.type = type;
     }
 
-    public Response(List<O> objectList, ResponseType type) {
-        this.objectList = objectList;
+    public Response(List<O> list, ResponseType type) {
+        this.list = list;
         this.type = type;
     }
     
@@ -48,8 +48,8 @@ public class Response<O> implements Serializable {
         return object;
     }
 
-    public List<O> getObjectList() {
-        return objectList;
+    public List<O> getList() {
+        return list;
     }
 
     public ResponseType getType() {

@@ -13,6 +13,7 @@ public enum ResponseType {
     
     OBJECT,
     ERROR,
-    CONFIRMATION;
+    CONFIRMATION,
+    LIST;
     
 }

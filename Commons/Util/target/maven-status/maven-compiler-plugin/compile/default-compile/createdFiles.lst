@@ -3,6 +3,7 @@ com/mycompany/dto/DtoSellerLogIn.class
 com/mycompany/supports/Calculator.class
 com/mycompany/enums/Service.class
 com/mycompany/enums/Method.class
+com/mycompany/dto/DtoOrder.class
 com/mycompany/supports/Request.class
 com/mycompany/supports/Response.class
 com/mycompany/enums/ResponseType.class

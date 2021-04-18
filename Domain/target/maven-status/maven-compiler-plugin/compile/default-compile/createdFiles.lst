@@ -13,5 +13,6 @@ com/mycompany/entities/SaleComponent.class
 com/mycompany/model/MoOperator.class
 com/mycompany/model/MoProduct.class
 com/mycompany/model/MoSale.class
+com/mycompany/entities/Return.class
 com/mycompany/abstracts/AbstractCombo.class
 com/mycompany/entities/SaleProduct.class

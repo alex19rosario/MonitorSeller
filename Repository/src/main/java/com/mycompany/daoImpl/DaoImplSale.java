@@ -6,6 +6,7 @@
 package com.mycompany.daoImpl;
 
 import com.mycompany.dao.DaoSale;
+import com.mycompany.dto.DtoOrder;
 import com.mycompany.entities.Sale;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,17 @@ public class DaoImplSale extends DaoSale{
     @Override
     public void create(Sale entity) {
         saleDB.add(entity);
+    }
+
+    @Override
+    public List<DtoOrder> findAllFrom(Long idTruck) {
+        List<DtoOrder> orderList = new ArrayList<>();
+        for(Sale s: saleDB){
+            if(s.getIdTruck() == idTruck){
+                orderList.add(new DtoOrder(s.getId(), s.getTotalIncome(), s.getDate()));
+            }
+        }
+        return orderList;
     }
     
 }

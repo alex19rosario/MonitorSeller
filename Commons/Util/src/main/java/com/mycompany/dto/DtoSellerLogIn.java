@@ -13,6 +13,7 @@ import java.io.Serializable;
  */
 public class DtoSellerLogIn implements Serializable {
     
+    private static final long serialVersionUID = -399122870815032165L;
     private String username;
     private String password;
     private Long idTruck;

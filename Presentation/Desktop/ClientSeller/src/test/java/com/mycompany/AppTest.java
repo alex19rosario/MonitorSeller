@@ -1,6 +1,7 @@
 package com.mycompany;
 
 import com.mycompany.api.Requester;
+import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.entities.Component;
 import com.mycompany.entities.FoodTruck;
@@ -69,6 +70,18 @@ public class AppTest
         FoodTruck truck = new FoodTruck(1L, "testAddress");
         Timestamp date = new Timestamp(System.currentTimeMillis());
         Response response = requester.consume(Service.SELLER, Method.REPORT_SALE, new MoSale(1L, date, comboList, productList, componentList, truck, op));
-        assertEquals(response.getType(), ResponseType.CONFIRMATION);      
+        assertEquals(ResponseType.CONFIRMATION,response.getType());  
     }
+    
+    @Test
+    public void ListOrders(){
+        Response response = requester.consume(Service.SELLER, Method.LIST_ORDERS, 1L);
+        List<DtoOrder> orderList = response.getList();
+        assertEquals(0, orderList.size());
+    }
+    
+    /*@Test
+    public void returnOrder(){
+        
+    }*/
 }
