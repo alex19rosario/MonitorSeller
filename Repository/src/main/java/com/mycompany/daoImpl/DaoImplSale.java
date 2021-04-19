@@ -8,6 +8,7 @@ package com.mycompany.daoImpl;
 import com.mycompany.dao.DaoSale;
 import com.mycompany.dto.DtoOrder;
 import com.mycompany.entities.Sale;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,19 @@ public class DaoImplSale extends DaoSale{
             }
         }
         return orderList;
+    }
+
+    @Override
+    public Sale findById(Long id) {
+        Timestamp date = new Timestamp(System.currentTimeMillis());
+        Sale sale = new Sale(1L, date, 300.0, 150.0, 1L, 1L);
+        return sale;
+    }
+
+    @Override
+    public void removeById(Long id) {
+        saleDB.clear();
+        //THIS METHOD COULD BE EMPTY FOR A WHILE, JUST UNTIL SET UP THE PESISTENCE LAYER WITH MYSQL
     }
     
 }

@@ -6,6 +6,7 @@
 package com.mycompany.service;
 
 import com.mycompany.dto.DtoOrder;
+import com.mycompany.dto.DtoReturn;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.model.MoOperator;
@@ -23,5 +24,7 @@ public interface ServiceSeller {
     public void reportSale(MoSale sale);
     
     public List<DtoOrder> listOrders(Long idTruck);
+    
+    public void returnOrder(DtoReturn dto);
     
 }

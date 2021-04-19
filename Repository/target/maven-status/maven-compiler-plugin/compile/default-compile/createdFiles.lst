@@ -5,6 +5,7 @@ com/mycompany/factory/ApplicationContext$1.class
 com/mycompany/dao/DaoSaleCombo.class
 com/mycompany/daoImpl/DaoImplSaleCombo.class
 com/mycompany/dao/DaoFoodTruck.class
+com/mycompany/dao/GenericEliminator.class
 com/mycompany/daoImpl/DaoImplFoodTruck.class
 com/mycompany/dao/DaoSaleProduct.class
 com/mycompany/dao/DaoOperator.class
@@ -15,5 +16,7 @@ com/mycompany/daoImpl/DaoImplOperator.class
 com/mycompany/daoImpl/DaoImplSaleProduct.class
 com/mycompany/factory/DaoEnum.class
 com/mycompany/dao/GenericCreator.class
+com/mycompany/dao/DaoReturn.class
 com/mycompany/daoImpl/DaoImplSaleComponent.class
 com/mycompany/dao/DaoSale.class
+com/mycompany/daoImpl/DaoImplReturn.class

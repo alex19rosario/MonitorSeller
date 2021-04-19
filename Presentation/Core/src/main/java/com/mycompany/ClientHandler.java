@@ -5,6 +5,7 @@
  */
 package com.mycompany;
 
+import com.mycompany.dto.DtoReturn;
 import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.enums.Method;
 import com.mycompany.enums.ResponseType;
@@ -72,6 +73,14 @@ public class ClientHandler extends Thread {
                     if(request.getMethod() == Method.LIST_ORDERS){
                         Long idTruck = (Long) request.getObject();
                         Response response = new Response(serviceSeller.listOrders(idTruck), ResponseType.LIST);
+                        this.out.writeObject(response);
+                        this.out.close();
+                        this.s.close();
+                    }
+                    if(request.getMethod() == Method.RETURN_ORDER){
+                        DtoReturn dto = (DtoReturn) request.getObject();
+                        serviceSeller.returnOrder(dto);
+                        Response response = new Response(ResponseType.CONFIRMATION);
                         this.out.writeObject(response);
                         this.out.close();
                         this.s.close();

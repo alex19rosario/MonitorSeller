@@ -8,6 +8,7 @@ package com.mycompany.factory;
 import com.mycompany.dao.GenericDao;
 import com.mycompany.daoImpl.DaoImplFoodTruck;
 import com.mycompany.daoImpl.DaoImplOperator;
+import com.mycompany.daoImpl.DaoImplReturn;
 import com.mycompany.daoImpl.DaoImplSale;
 import com.mycompany.daoImpl.DaoImplSaleCombo;
 import com.mycompany.daoImpl.DaoImplSaleComponent;
@@ -33,6 +34,8 @@ public class ApplicationContext {
                 return new DaoImplSaleProduct();
             case DAO_SALE_COMPONENT:
                 return new DaoImplSaleComponent();
+            case DAO_RETURN:
+                return new DaoImplReturn();
             default:
                 return null;
         }

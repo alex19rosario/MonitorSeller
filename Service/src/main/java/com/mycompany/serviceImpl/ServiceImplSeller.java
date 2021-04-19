@@ -7,13 +7,16 @@ package com.mycompany.serviceImpl;
 
 import com.mycompany.dao.DaoFoodTruck;
 import com.mycompany.dao.DaoOperator;
+import com.mycompany.dao.DaoReturn;
 import com.mycompany.dao.DaoSale;
 import com.mycompany.dao.DaoSaleCombo;
 import com.mycompany.dao.DaoSaleComponent;
 import com.mycompany.dao.DaoSaleProduct;
 import com.mycompany.dto.DtoOrder;
+import com.mycompany.dto.DtoReturn;
 import com.mycompany.entities.Component;
 import com.mycompany.entities.Operator;
+import com.mycompany.entities.Return;
 import com.mycompany.entities.Sale;
 import com.mycompany.entities.SaleCombo;
 import com.mycompany.entities.SaleComponent;
@@ -28,7 +31,6 @@ import com.mycompany.model.MoProduct;
 import com.mycompany.model.MoSale;
 import com.mycompany.service.ServiceSeller;
 import com.mycompany.supports.Calculator;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,6 +46,7 @@ public class ServiceImplSeller implements ServiceSeller {
     private final DaoSaleCombo daoSaleCombo = (DaoSaleCombo) ApplicationContext.getDao(DaoEnum.DAO_SALE_COMBO);
     private final DaoSaleProduct daoSaleProduct = (DaoSaleProduct) ApplicationContext.getDao(DaoEnum.DAO_SALE_PRODUCT);
     private final DaoSaleComponent daoSaleComponent = (DaoSaleComponent) ApplicationContext.getDao(DaoEnum.DAO_SALE_COMPONENT);
+    private final DaoReturn daoReturn = (DaoReturn) ApplicationContext.getDao(DaoEnum.DAO_RETURN);
     private final Calculator cal = new Calculator();
 
     @Override
@@ -78,6 +81,17 @@ public class ServiceImplSeller implements ServiceSeller {
         List<DtoOrder> orderList = daoSale.findAllFrom(idTruck);
         return orderList;     
     }
+
+    @Override
+    public void returnOrder(DtoReturn dto) {
+        Sale sale = daoSale.findById(dto.getIdSale());
+        daoReturn.create(new Return(sale.getTotalIncome(), sale.getIdTruck() ,sale.getIdOperator(), dto.getDate()));
+        daoSale.removeById(dto.getIdSale());
+    }
+
+    
+    
+    
 
     
     

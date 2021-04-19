@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author carlos
  */
-public abstract class DaoSale implements GenericCreator<Sale>{
+public abstract class DaoSale implements GenericCreator<Sale>, GenericFinder<Sale,Long>, GenericEliminator<Long>{
 
     public abstract List<DtoOrder> findAllFrom(Long idTruck);   
 }

@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.enums;
+package com.mycompany.dao;
+
+import com.mycompany.entities.Return;
 
 /**
  *
  * @author carlos
  */
-public enum Method {
+public abstract class DaoReturn implements GenericCreator<Return> {
     
-    LOG_IN,
-    REPORT_SALE,
-    LIST_ORDERS,
-    RETURN_ORDER; 
 }

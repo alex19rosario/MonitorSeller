@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.enums;
+package com.mycompany.dao;
 
 /**
  *
  * @author carlos
  */
-public enum Method {
+public interface GenericEliminator<ID> extends GenericDao{
     
-    LOG_IN,
-    REPORT_SALE,
-    LIST_ORDERS,
-    RETURN_ORDER; 
+    public void removeById(ID id);
+    
 }

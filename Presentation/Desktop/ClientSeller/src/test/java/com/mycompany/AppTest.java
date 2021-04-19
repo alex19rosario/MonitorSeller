@@ -2,6 +2,7 @@ package com.mycompany;
 
 import com.mycompany.api.Requester;
 import com.mycompany.dto.DtoOrder;
+import com.mycompany.dto.DtoReturn;
 import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.entities.Component;
 import com.mycompany.entities.FoodTruck;
@@ -76,12 +77,13 @@ public class AppTest
     @Test
     public void ListOrders(){
         Response response = requester.consume(Service.SELLER, Method.LIST_ORDERS, 1L);
-        List<DtoOrder> orderList = response.getList();
-        assertEquals(0, orderList.size());
+        assertEquals(ResponseType.LIST, response.getType());
     }
     
-    /*@Test
+    @Test
     public void returnOrder(){
-        
-    }*/
+        Timestamp date = new Timestamp(System.currentTimeMillis());
+        Response response = requester.consume(Service.SELLER, Method.RETURN_ORDER, new DtoReturn(1L, date));
+        assertEquals(ResponseType.CONFIRMATION, response.getType());
+    }
 }

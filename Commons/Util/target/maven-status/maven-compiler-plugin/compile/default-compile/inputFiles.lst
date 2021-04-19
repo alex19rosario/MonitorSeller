@@ -1,6 +1,7 @@
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/dto/DtoOrder.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/enums/Method.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/supports/Calculator.java
+/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/dto/DtoReturn.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/supports/Response.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/enums/ResponseType.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/src/main/java/com/mycompany/exceptions/IncorrectPasswordException.java
