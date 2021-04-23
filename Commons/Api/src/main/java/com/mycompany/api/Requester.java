@@ -33,6 +33,29 @@ public class Requester<O> {
             out.writeObject(request);
             this.response = (Response) in.readObject();
             in.close();
+            out.flush();
+            out.close();
+            s.close();
+        }
+        catch(IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        finally{
+            return this.response;
+        }
+    }
+    
+    public Response consume(Service service, Method method){
+        
+        try{
+            Socket s = new Socket(ip, 4444); 
+            ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
+            ObjectInputStream in = new ObjectInputStream(s.getInputStream());
+            Request request = new Request(service, method);
+            out.writeObject(request);
+            this.response = (Response) in.readObject();
+            in.close();
+            out.flush();
             out.close();
             s.close();
         }

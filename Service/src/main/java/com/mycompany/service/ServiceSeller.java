@@ -9,6 +9,7 @@ import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoReturn;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.model.MoCombo;
 import com.mycompany.model.MoOperator;
 import com.mycompany.model.MoSale;
 import java.util.List;
@@ -26,5 +27,7 @@ public interface ServiceSeller {
     public List<DtoOrder> listOrders(Long idTruck);
     
     public void returnOrder(DtoReturn dto);
+    
+    public List<MoCombo> listCombos();
     
 }

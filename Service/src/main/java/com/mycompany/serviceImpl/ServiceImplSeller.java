@@ -5,6 +5,7 @@
  */
 package com.mycompany.serviceImpl;
 
+import com.mycompany.dao.DaoCombo;
 import com.mycompany.dao.DaoFoodTruck;
 import com.mycompany.dao.DaoOperator;
 import com.mycompany.dao.DaoReturn;
@@ -31,6 +32,7 @@ import com.mycompany.model.MoProduct;
 import com.mycompany.model.MoSale;
 import com.mycompany.service.ServiceSeller;
 import com.mycompany.supports.Calculator;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,6 +49,7 @@ public class ServiceImplSeller implements ServiceSeller {
     private final DaoSaleProduct daoSaleProduct = (DaoSaleProduct) ApplicationContext.getDao(DaoEnum.DAO_SALE_PRODUCT);
     private final DaoSaleComponent daoSaleComponent = (DaoSaleComponent) ApplicationContext.getDao(DaoEnum.DAO_SALE_COMPONENT);
     private final DaoReturn daoReturn = (DaoReturn) ApplicationContext.getDao(DaoEnum.DAO_RETURN);
+    private final DaoCombo daoCombo = (DaoCombo) ApplicationContext.getDao(DaoEnum.DAO_COMBO);
     private final Calculator cal = new Calculator();
 
     @Override
@@ -73,7 +76,7 @@ public class ServiceImplSeller implements ServiceSeller {
         }
         for(Component c: moSale.getComponentList()){
             daoSaleComponent.create(new SaleComponent(moSale.getId(), c.getId()));
-        }      
+        } 
     }
 
     @Override
@@ -89,10 +92,11 @@ public class ServiceImplSeller implements ServiceSeller {
         daoSale.removeById(dto.getIdSale());
     }
 
-    
-    
-    
-
+    @Override
+    public List<MoCombo> listCombos() {
+        List<MoCombo> comboList = daoCombo.findAllCombos();       
+        return comboList;
+    }
     
     
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.AppTest" time="0.027" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.AppTest" time="0.021" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/Service-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/Repository-1.0-SNAPSHOT.jar:"/>
+    <property name="java.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/.m2/repository/com/mycompany/Util/1.0-SNAPSHOT/Util-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Domain/1.0-SNAPSHOT/Domain-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Service/1.0-SNAPSHOT/Service-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Repository/1.0-SNAPSHOT/Repository-1.0-SNAPSHOT.jar:"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -16,9 +16,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire/surefirebooter12820580597664997778.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire 2021-04-18T21-24-07_081-jvmRun1 surefire13710175560976217912tmp surefire_611701906436015173177tmp"/>
+    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire/surefirebooter5191835566360549824.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire 2021-04-22T22-17-42_585-jvmRun1 surefire16657588493905198907tmp surefire_08885732870876705345tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Service/target/Service-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/Repository-1.0-SNAPSHOT.jar:"/>
+    <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/.m2/repository/com/mycompany/Util/1.0-SNAPSHOT/Util-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Domain/1.0-SNAPSHOT/Domain-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Service/1.0-SNAPSHOT/Service-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Repository/1.0-SNAPSHOT/Repository-1.0-SNAPSHOT.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/carlos"/>
     <property name="user.language" value="en"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire/surefirebooter12820580597664997778.jar"/>
+    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Presentation/Core/target/surefire/surefirebooter5191835566360549824.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="carlos"/>

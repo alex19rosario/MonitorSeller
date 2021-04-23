@@ -17,6 +17,7 @@ public enum DaoEnum {
     DAO_SALE_COMBO,
     DAO_SALE_PRODUCT,
     DAO_SALE_COMPONENT,
-    DAO_RETURN;
+    DAO_RETURN,
+    DAO_COMBO;
     
 }

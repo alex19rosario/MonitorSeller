@@ -33,34 +33,28 @@ public class AppTest
     private final Requester requester = new Requester();
     
     @Test
-    public void logIn_HappyPath(){
-        
+    public void logIn_HappyPath(){       
         Response response = (Response) requester.consume(Service.SELLER, Method.LOG_IN, new DtoSellerLogIn("testOperator", "testPassword",1L));
         MoOperator op = (MoOperator) response.getObject();
-        assertEquals("testPassword",op.getPassword());
-        
+        assertEquals("testPassword",op.getPassword());       
     }
     
     @Test
-    public void logIn_UserNotExist(){
-        
+    public void logIn_UserNotExist(){       
         Response response = (Response) requester.consume(Service.SELLER, Method.LOG_IN, new DtoSellerLogIn("testOperator1", "testPassword",1L));
         String exceptionMessage = response.getExceptionMessage();
-        assertEquals("The username testOperator1 does not exist.",exceptionMessage);
-        
+        assertEquals("The username testOperator1 does not exist.",exceptionMessage);        
     }
     
     @Test
-    public void logIn_IncorrectPassword(){
-        
+    public void logIn_IncorrectPassword(){       
         Response response = (Response) requester.consume(Service.SELLER, Method.LOG_IN, new DtoSellerLogIn("testOperator", "testPassword1",1L));
         String exceptionMessage = response.getExceptionMessage();
-        assertEquals("The password is incorrect.",exceptionMessage);
-        
+        assertEquals("The password is incorrect.",exceptionMessage);       
     }
     
     @Test
-    public void reportSail(){          
+    public void reportSale(){          
         List<MoCombo> comboList = new ArrayList<>();
         comboList.add(new MoCombo(1L, "testCombo", 100.0, new ArrayList<MoProduct>()));
         List<MoProduct> productList = new ArrayList<>();
@@ -85,5 +79,11 @@ public class AppTest
         Timestamp date = new Timestamp(System.currentTimeMillis());
         Response response = requester.consume(Service.SELLER, Method.RETURN_ORDER, new DtoReturn(1L, date));
         assertEquals(ResponseType.CONFIRMATION, response.getType());
+    }
+    
+    @Test
+    public void listCombos(){
+        Response response = requester.consume(Service.SELLER, Method.LIST_COMBOS);
+        assertEquals(ResponseType.LIST, response.getType());
     }
 }

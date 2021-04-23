@@ -46,7 +46,6 @@ public class DaoImplSale extends DaoSale{
     @Override
     public void removeById(Long id) {
         saleDB.clear();
-        //THIS METHOD COULD BE EMPTY FOR A WHILE, JUST UNTIL SET UP THE PESISTENCE LAYER WITH MYSQL
     }
     
 }

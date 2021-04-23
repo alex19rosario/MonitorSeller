@@ -58,6 +58,7 @@ public class ClientHandler extends Thread {
                         }
                         finally{
                             this.out.writeObject(response);
+                            this.out.flush();
                             this.out.close();
                             this.s.close();
                         }
@@ -67,6 +68,7 @@ public class ClientHandler extends Thread {
                         serviceSeller.reportSale(sale);
                         Response response = new Response(ResponseType.CONFIRMATION);
                         this.out.writeObject(response);
+                        this.out.flush();
                         this.out.close();
                         this.s.close();
                     }
@@ -74,6 +76,7 @@ public class ClientHandler extends Thread {
                         Long idTruck = (Long) request.getObject();
                         Response response = new Response(serviceSeller.listOrders(idTruck), ResponseType.LIST);
                         this.out.writeObject(response);
+                        this.out.flush();
                         this.out.close();
                         this.s.close();
                     }
@@ -82,8 +85,16 @@ public class ClientHandler extends Thread {
                         serviceSeller.returnOrder(dto);
                         Response response = new Response(ResponseType.CONFIRMATION);
                         this.out.writeObject(response);
+                        this.out.flush();
                         this.out.close();
                         this.s.close();
+                    }
+                    if(request.getMethod() == Method.LIST_COMBOS){
+                        Response response = new Response(serviceSeller.listCombos(), ResponseType.LIST);
+                        this.out.writeObject(response);
+                        this.out.flush();
+                        this.out.close();
+                        this.s.close();                      
                     }
                     
             }

@@ -1,3 +1,4 @@
+com/mycompany/daoImpl/DaoImplCombo.class
 com/mycompany/factory/ApplicationContext.class
 com/mycompany/dao/GenericModifier.class
 com/mycompany/dao/GenericFinder.class
@@ -16,6 +17,7 @@ com/mycompany/daoImpl/DaoImplOperator.class
 com/mycompany/daoImpl/DaoImplSaleProduct.class
 com/mycompany/factory/DaoEnum.class
 com/mycompany/dao/GenericCreator.class
+com/mycompany/dao/DaoCombo.class
 com/mycompany/dao/DaoReturn.class
 com/mycompany/daoImpl/DaoImplSaleComponent.class
 com/mycompany/dao/DaoSale.class

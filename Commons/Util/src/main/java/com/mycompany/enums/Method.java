@@ -14,5 +14,6 @@ public enum Method {
     LOG_IN,
     REPORT_SALE,
     LIST_ORDERS,
-    RETURN_ORDER; 
+    RETURN_ORDER,
+    LIST_COMBOS; 
 }

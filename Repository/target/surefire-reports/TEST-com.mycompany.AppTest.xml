@@ -6,7 +6,7 @@
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:"/>
+    <property name="java.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/.m2/repository/com/mycompany/Domain/1.0-SNAPSHOT/Domain-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Util/1.0-SNAPSHOT/Util-1.0-SNAPSHOT.jar:"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
@@ -16,9 +16,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter12850973934980803782.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire 2021-04-18T21-24-07_081-jvmRun1 surefire254208425223850540tmp surefire_49011833069500618104tmp"/>
+    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter7819171543775369135.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire 2021-04-22T22-17-28_873-jvmRun1 surefire1512915981150830918tmp surefire_011546157397070333416tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:"/>
+    <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/.m2/repository/com/mycompany/Domain/1.0-SNAPSHOT/Domain-1.0-SNAPSHOT.jar:/home/carlos/.m2/repository/com/mycompany/Util/1.0-SNAPSHOT/Util-1.0-SNAPSHOT.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/carlos"/>
     <property name="user.language" value="en"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter12850973934980803782.jar"/>
+    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter7819171543775369135.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="carlos"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="daoImplOperator_findByUsername" classname="com.mycompany.AppTest" time="0.002"/>
+  <testcase name="daoImplOperator_findByUsername" classname="com.mycompany.AppTest" time="0.003"/>
   <testcase name="daoImplOperator_modify" classname="com.mycompany.AppTest" time="0"/>
   <testcase name="daoImplFoodTruck_findById" classname="com.mycompany.AppTest" time="0.001"/>
   <testcase name="daoImplOperator_findByUsername_exception" classname="com.mycompany.AppTest" time="0.001"/>
