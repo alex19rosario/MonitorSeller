@@ -11,6 +11,7 @@ import com.mycompany.enums.Method;
 import com.mycompany.enums.ResponseType;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.model.MoOperator;
 import com.mycompany.model.MoSale;
 import com.mycompany.serviceImpl.ServiceImplSeller;
 import com.mycompany.supports.Request;
@@ -109,6 +110,14 @@ public class ClientHandler extends Thread {
                         this.out.flush();
                         this.out.close();
                         this.s.close(); 
+                    }
+                    if(request.getMethod() == Method.LOG_OUT){
+                        serviceSeller.logOut((MoOperator) request.getObject());
+                        Response response = new Response(ResponseType.CONFIRMATION);
+                        this.out.writeObject(response);
+                        this.out.flush();
+                        this.out.close();
+                        this.s.close();                      
                     }
             }
         }

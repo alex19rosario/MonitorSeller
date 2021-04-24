@@ -36,4 +36,6 @@ public interface ServiceSeller {
     
     public List<Component> listComponents();
     
+    public void logOut(MoOperator operator);
+    
 }

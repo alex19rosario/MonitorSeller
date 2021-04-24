@@ -17,5 +17,6 @@ public enum Method {
     RETURN_ORDER,
     LIST_COMBOS,
     LIST_PRODUCTS,
-    LIST_COMPONENTS; 
+    LIST_COMPONENTS,
+    LOG_OUT; 
 }

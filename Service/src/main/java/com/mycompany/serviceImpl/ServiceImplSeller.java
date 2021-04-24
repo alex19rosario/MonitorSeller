@@ -112,6 +112,11 @@ public class ServiceImplSeller implements ServiceSeller {
         List<Component> componentList = daoComponent.findAll();
         return componentList;
     }
+
+    @Override
+    public void logOut(MoOperator operator) {
+        daoOperator.modify(new Operator(operator.getId(),operator.getName(), operator.getUsername(), operator.getPassword(), 0L));
+    }
     
     
 }

@@ -99,4 +99,10 @@ public class AppTest
         assertEquals(ResponseType.LIST, response.getType());
     }
     
+    @Test
+    public void logOut(){
+        Response response = requester.consume(Service.SELLER, Method.LOG_OUT, new MoOperator(1L, "testOperator", "testOperator", "testPassword", new FoodTruck("address")));
+        assertEquals(ResponseType.CONFIRMATION, response.getType());
+    }
+    
 }
