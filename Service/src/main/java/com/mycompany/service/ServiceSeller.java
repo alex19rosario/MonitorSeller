@@ -7,6 +7,7 @@ package com.mycompany.service;
 
 import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoReturn;
+import com.mycompany.entities.Component;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.model.MoCombo;
@@ -32,5 +33,7 @@ public interface ServiceSeller {
     public List<MoCombo> listCombos();
     
     public List<MoProduct> listProducts();
+    
+    public List<Component> listComponents();
     
 }

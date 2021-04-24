@@ -103,7 +103,13 @@ public class ClientHandler extends Thread {
                         this.out.close();
                         this.s.close(); 
                     }
-                    
+                    if(request.getMethod() == Method.LIST_COMPONENTS){
+                        Response response = new Response(serviceSeller.listComponents(), ResponseType.LIST);
+                        this.out.writeObject(response);
+                        this.out.flush();
+                        this.out.close();
+                        this.s.close(); 
+                    }
             }
         }
         catch(IOException | ClassNotFoundException e){

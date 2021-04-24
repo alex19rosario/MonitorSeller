@@ -3,19 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.enums;
+package com.mycompany.dao;
+
+import com.mycompany.entities.Component;
 
 /**
  *
  * @author carlos
  */
-public enum Method {
+public abstract class DaoComponent implements GenericFindAll<Component> {
     
-    LOG_IN,
-    REPORT_SALE,
-    LIST_ORDERS,
-    RETURN_ORDER,
-    LIST_COMBOS,
-    LIST_PRODUCTS,
-    LIST_COMPONENTS; 
 }

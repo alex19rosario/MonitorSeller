@@ -88,8 +88,14 @@ public class AppTest
     }
     
     @Test
-    public void listProduct(){
+    public void listProducts(){
         Response response = requester.consume(Service.SELLER, Method.LIST_PRODUCTS);
+        assertEquals(ResponseType.LIST, response.getType());
+    }
+    
+    @Test
+    public void listComponents(){
+        Response response = requester.consume(Service.SELLER, Method.LIST_COMPONENTS);
         assertEquals(ResponseType.LIST, response.getType());
     }
     

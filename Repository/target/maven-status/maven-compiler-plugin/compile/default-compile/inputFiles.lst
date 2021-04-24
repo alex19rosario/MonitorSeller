@@ -1,7 +1,9 @@
+/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/GenericFindAll.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplFoodTruck.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplSaleCombo.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/GenericModifier.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/DaoSaleProduct.java
+/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/DaoComponent.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/GenericFinder.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/DaoProduct.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplSale.java
@@ -17,6 +19,7 @@
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/dao/DaoFoodTruck.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplCombo.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplProduct.java
+/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplComponent.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/factory/DaoEnum.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplReturn.java
 /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/src/main/java/com/mycompany/daoImpl/DaoImplSaleProduct.java

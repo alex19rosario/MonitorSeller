@@ -1,3 +1,4 @@
+com/mycompany/dao/GenericFindAll.class
 com/mycompany/factory/ApplicationContext$1.class
 com/mycompany/daoImpl/DaoImplSaleCombo.class
 com/mycompany/dao/DaoFoodTruck.class
@@ -8,6 +9,7 @@ com/mycompany/daoImpl/DaoImplSale.class
 com/mycompany/daoImpl/DaoImplSaleProduct.class
 com/mycompany/dao/DaoSale.class
 com/mycompany/daoImpl/DaoImplProduct.class
+com/mycompany/dao/DaoComponent.class
 com/mycompany/daoImpl/DaoImplCombo.class
 com/mycompany/factory/ApplicationContext.class
 com/mycompany/dao/GenericModifier.class
@@ -24,3 +26,4 @@ com/mycompany/dao/DaoCombo.class
 com/mycompany/dao/DaoReturn.class
 com/mycompany/daoImpl/DaoImplSaleComponent.class
 com/mycompany/daoImpl/DaoImplReturn.class
+com/mycompany/daoImpl/DaoImplComponent.class

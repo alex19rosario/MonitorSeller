@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.AppTest" time="0.114" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.AppTest" time="0.112" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter366170985888173724.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire 2021-04-23T21-38-50_997-jvmRun1 surefire7686151387083135452tmp surefire_412006971293760221599tmp"/>
+    <property name="sun.java.command" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter6114923883570383122.jar /home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire 2021-04-23T22-18-25_040-jvmRun1 surefire15740193605121685988tmp surefire_410178619477910166757tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/test-classes:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/classes:/home/carlos/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/carlos/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Domain/target/Domain-1.0-SNAPSHOT.jar:/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Commons/Util/target/Util-1.0-SNAPSHOT.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter366170985888173724.jar"/>
+    <property name="surefire.real.class.path" value="/home/carlos/JavaProjects/MonitorSeller/MonitorSeller/Repository/target/surefire/surefirebooter6114923883570383122.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.10+9-Ubuntu-0ubuntu1.20.04"/>
     <property name="user.name" value="carlos"/>
@@ -58,8 +58,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="daoImplOperator_findByUsername" classname="com.mycompany.AppTest" time="0.008"/>
-  <testcase name="daoImplOperator_modify" classname="com.mycompany.AppTest" time="0"/>
+  <testcase name="daoImplOperator_findByUsername" classname="com.mycompany.AppTest" time="0.007"/>
+  <testcase name="daoImplOperator_modify" classname="com.mycompany.AppTest" time="0.001"/>
   <testcase name="daoImplFoodTruck_findById" classname="com.mycompany.AppTest" time="0.003"/>
   <testcase name="daoImplOperator_findByUsername_exception" classname="com.mycompany.AppTest" time="0.002"/>
 </testsuite>

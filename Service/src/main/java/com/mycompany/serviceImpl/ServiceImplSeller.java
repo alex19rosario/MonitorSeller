@@ -6,6 +6,7 @@
 package com.mycompany.serviceImpl;
 
 import com.mycompany.dao.DaoCombo;
+import com.mycompany.dao.DaoComponent;
 import com.mycompany.dao.DaoFoodTruck;
 import com.mycompany.dao.DaoOperator;
 import com.mycompany.dao.DaoProduct;
@@ -51,6 +52,7 @@ public class ServiceImplSeller implements ServiceSeller {
     private final DaoReturn daoReturn = (DaoReturn) ApplicationContext.getDao(DaoEnum.DAO_RETURN);
     private final DaoCombo daoCombo = (DaoCombo) ApplicationContext.getDao(DaoEnum.DAO_COMBO);
     private final DaoProduct daoProduct = (DaoProduct) ApplicationContext.getDao(DaoEnum.DAO_PRODUCT);
+    private final DaoComponent daoComponent = (DaoComponent) ApplicationContext.getDao(DaoEnum.DAO_COMPONENT);
     private final Calculator cal = new Calculator();
 
     @Override
@@ -103,6 +105,12 @@ public class ServiceImplSeller implements ServiceSeller {
     public List<MoProduct> listProducts() {
         List<MoProduct> productList = daoProduct.findAllProducts();
         return productList;
+    }
+
+    @Override
+    public List<Component> listComponents() {
+        List<Component> componentList = daoComponent.findAll();
+        return componentList;
     }
     
     
