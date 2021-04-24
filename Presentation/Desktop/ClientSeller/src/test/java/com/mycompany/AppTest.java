@@ -1,7 +1,6 @@
 package com.mycompany;
 
 import com.mycompany.api.Requester;
-import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoReturn;
 import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.entities.Component;
@@ -51,6 +50,13 @@ public class AppTest
         Response response = (Response) requester.consume(Service.SELLER, Method.LOG_IN, new DtoSellerLogIn("testOperator", "testPassword1",1L));
         String exceptionMessage = response.getExceptionMessage();
         assertEquals("The password is incorrect.",exceptionMessage);       
+    }
+    
+    @Test
+    public void logIn_TruckNotAvailable(){
+        Response response = (Response) requester.consume(Service.SELLER, Method.LOG_IN, new DtoSellerLogIn("testOperator", "testPassword",2L));
+        String exceptionMessage = response.getExceptionMessage();
+        assertEquals("This truck is already in use.",exceptionMessage);
     }
     
     @Test

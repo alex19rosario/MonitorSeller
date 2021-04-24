@@ -13,4 +13,5 @@ import com.mycompany.entities.FoodTruck;
  */
 public abstract class DaoFoodTruck implements GenericFinder<FoodTruck, Long>{
     
+    public abstract boolean isNotAvailable(Long id);
 }

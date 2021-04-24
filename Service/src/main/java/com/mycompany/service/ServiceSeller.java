@@ -7,9 +7,11 @@ package com.mycompany.service;
 
 import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoReturn;
+import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.entities.Component;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.exceptions.TruckNotAvailableException;
 import com.mycompany.model.MoCombo;
 import com.mycompany.model.MoOperator;
 import com.mycompany.model.MoProduct;
@@ -22,7 +24,7 @@ import java.util.List;
  */
 public interface ServiceSeller {
     
-    public MoOperator logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException;
+    public MoOperator logIn(DtoSellerLogIn dto) throws DoesNotExistException, IncorrectPasswordException, TruckNotAvailableException;
     
     public void reportSale(MoSale sale);
     

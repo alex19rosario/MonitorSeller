@@ -17,6 +17,7 @@ import com.mycompany.dao.DaoSaleComponent;
 import com.mycompany.dao.DaoSaleProduct;
 import com.mycompany.dto.DtoOrder;
 import com.mycompany.dto.DtoReturn;
+import com.mycompany.dto.DtoSellerLogIn;
 import com.mycompany.entities.Component;
 import com.mycompany.entities.Operator;
 import com.mycompany.entities.Return;
@@ -26,6 +27,7 @@ import com.mycompany.entities.SaleComponent;
 import com.mycompany.entities.SaleProduct;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.exceptions.TruckNotAvailableException;
 import com.mycompany.factory.ApplicationContext;
 import com.mycompany.factory.DaoEnum;
 import com.mycompany.model.MoCombo;
@@ -56,14 +58,18 @@ public class ServiceImplSeller implements ServiceSeller {
     private final Calculator cal = new Calculator();
 
     @Override
-    public MoOperator logIn(String username, String password, Long idTruck) throws DoesNotExistException, IncorrectPasswordException {
+    public MoOperator logIn(DtoSellerLogIn dto) throws DoesNotExistException, IncorrectPasswordException, TruckNotAvailableException{
          
-        Operator op = daoOperator.findByUsername(username);
-        if(!op.getPassword().equalsIgnoreCase(password)){
+        Operator op = daoOperator.findByUsername(dto.getUsername());
+        if(!op.getPassword().equalsIgnoreCase(dto.getPassword())){
             throw new IncorrectPasswordException("The password is incorrect.");
         }
-        daoOperator.modify(new Operator(1L, "testOperator", "testOperator", "testPassword", 1L));
-        return new MoOperator(op.getId(), op.getName(), op.getUsername(), op.getPassword(), daoTruck.findById(idTruck));       
+        if(daoTruck.isNotAvailable(dto.getIdTruck())){
+            throw new TruckNotAvailableException("This truck is already in use.");
+        }
+        op.setIdTruck(dto.getIdTruck());
+        daoOperator.modify(op);
+        return new MoOperator(op.getId(), op.getName(), op.getUsername(), op.getPassword(), daoTruck.findById(dto.getIdTruck()));       
     }
 
     @Override

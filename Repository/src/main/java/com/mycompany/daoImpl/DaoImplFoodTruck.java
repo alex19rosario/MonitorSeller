@@ -28,5 +28,15 @@ public class DaoImplFoodTruck extends DaoFoodTruck{
     public FoodTruck findById(Long id) {
         return foodTruckDB.get(0);
     }
+
+    @Override
+    public boolean isNotAvailable(Long id) {
+        if(id == 1L){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     
 }

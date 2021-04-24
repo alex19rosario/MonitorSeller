@@ -11,6 +11,7 @@ import com.mycompany.enums.Method;
 import com.mycompany.enums.ResponseType;
 import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
+import com.mycompany.exceptions.TruckNotAvailableException;
 import com.mycompany.model.MoOperator;
 import com.mycompany.model.MoSale;
 import com.mycompany.serviceImpl.ServiceImplSeller;
@@ -50,10 +51,10 @@ public class ClientHandler extends Thread {
                         DtoSellerLogIn dto = (DtoSellerLogIn) request.getObject();
                         Response response = new Response();
                         try{
-                            Response r = new Response(serviceSeller.logIn(dto.getUsername(),dto.getPassword(),dto.getIdTruck()), ResponseType.OBJECT);
+                            Response r = new Response(serviceSeller.logIn(dto), ResponseType.OBJECT);
                             response = r;                           
                         }
-                        catch(DoesNotExistException | IncorrectPasswordException e){
+                        catch(DoesNotExistException | IncorrectPasswordException | TruckNotAvailableException e){
                             Response r = new Response(e.getMessage(), ResponseType.ERROR);
                             response = r;
                         }
