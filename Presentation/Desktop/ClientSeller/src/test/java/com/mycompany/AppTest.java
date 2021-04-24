@@ -86,4 +86,11 @@ public class AppTest
         Response response = requester.consume(Service.SELLER, Method.LIST_COMBOS);
         assertEquals(ResponseType.LIST, response.getType());
     }
+    
+    @Test
+    public void listProduct(){
+        Response response = requester.consume(Service.SELLER, Method.LIST_PRODUCTS);
+        assertEquals(ResponseType.LIST, response.getType());
+    }
+    
 }

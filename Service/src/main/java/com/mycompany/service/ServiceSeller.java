@@ -11,6 +11,7 @@ import com.mycompany.exceptions.DoesNotExistException;
 import com.mycompany.exceptions.IncorrectPasswordException;
 import com.mycompany.model.MoCombo;
 import com.mycompany.model.MoOperator;
+import com.mycompany.model.MoProduct;
 import com.mycompany.model.MoSale;
 import java.util.List;
 
@@ -29,5 +30,7 @@ public interface ServiceSeller {
     public void returnOrder(DtoReturn dto);
     
     public List<MoCombo> listCombos();
+    
+    public List<MoProduct> listProducts();
     
 }

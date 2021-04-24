@@ -96,6 +96,13 @@ public class ClientHandler extends Thread {
                         this.out.close();
                         this.s.close();                      
                     }
+                    if(request.getMethod() == Method.LIST_PRODUCTS){
+                        Response response = new Response(serviceSeller.listProducts(), ResponseType.LIST);
+                        this.out.writeObject(response);
+                        this.out.flush();
+                        this.out.close();
+                        this.s.close(); 
+                    }
                     
             }
         }
